@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'article_details_screen.dart';
 import 'package:timeago/timeago.dart' as timeago;
+import 'config.dart';
 
 class NewsFeedScreen extends StatefulWidget {
   const NewsFeedScreen({super.key});
@@ -92,7 +93,7 @@ class NewsFeedScreenState extends State<NewsFeedScreen> {
 
     // Initialize Banner Ad
     _bannerAd = BannerAd(
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111', // Test Ad Unit ID
+      adUnitId:  Config.bannerAdUnitId, // Test Ad Unit ID
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:timeago/timeago.dart' as timeago;
+import 'config.dart';
 
 class ArticleDetailsScreen extends StatefulWidget {
   final Map<String, dynamic> article;
@@ -21,7 +22,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
 
     // Initialize Banner Ad
     _bannerAd = BannerAd(
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111', // Test Ad Unit ID
+      adUnitId: Config.bannerAdUnitId,
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(
